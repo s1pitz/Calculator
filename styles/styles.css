@@ -1,0 +1,85 @@
+
+/* 
+Inline = Tidak bisa diubah tinggi dan panjangnya (bergantung dengan isi konten)
+Block = bisa diubah tinggi dan panjangnya cnth(div)
+Inline-botak = Bisa diubah tinggi dan panjangnya tetapi bergantung dengan isi konten
+Flex (flexible) = dapat diatur jarak antara item dalam sebuah container 
+*/
+
+/* font ambil dari google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+/* reset css */
+*{ /* * ngambil semua tag */
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    /* ketika pake box-sizing ukuran width atau height itu total bukan isinya
+       kalau tidak pake box-sizing ceritanya width: 20px nanti totalnya lebih soalnya border engga masuk */
+}
+
+body{
+    width: 100%;
+    /* % -> ngambil dari ukuran parent */
+    height: 100vw;
+    /* vw -> ngambil dari ukuran  layar screen browser kalian */
+    background-color: #f59c7c;
+    display: flex;
+    /* nambah 2 properti lagi yang dibawah */
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #41487c;
+    border: none;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #484848;
+    /* parameter 1(sumbu-x), 2(y), 3 (blur), 4(warna)  */
+}
+
+
+.content .display{
+    color: whitesmoke;
+    background: none;
+    border: none;
+    height: 7rem;
+    text-align: end;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+section{
+    margin: 1em 0;
+    /* parameter 1(vertikal) 2(horizontal) */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* kalau class nya terpisah harus pake koma 
+   kalau ga pake koma jadi nyambung kayak jadinya operator->number->reset */
+.operator, .number, .reset{
+    border: none;
+    border-radius: 50px;
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px #bfafb2;
+    font-weight: 500;
+}
+
+.number{
+    color:whitesmoke;
+    background: none;
+}
+
+.reset{
+    color: #f97a43;
+}
+
+.operator{
+    background-color: #f97a43;
+    color:whitesmoke;
+}

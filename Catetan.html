@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display dan REM-EM</title>
+    <style>
+        
+        body{
+            font-size: 20px;
+        }
+
+        .inline{
+            width: 150px;
+            height: 150px;
+            /* gegara inline jadi ga bisa diatur */
+            border: 1px solid black;
+        }
+
+        .block{
+            width: 150px;
+            height: 150px;
+            display: block;
+            border: 1px solid black;
+        }
+
+        .inline-block{
+            display: inline-block;
+            border: 1px solid black;
+        }
+
+        .absolute{
+            font-size: 16px;
+        }
+
+        .rem{
+            font-size: 1rem;
+            /* default dari html berapa kalau 1 rem (1*fontsizeRoot) */
+        }
+
+        .em{
+            font-size: 1em;
+            /* bergantung sama yang ngebungkus parentnya kalau disini (body) */
+        }
+
+        /* 
+        rem (root element -> tag html) : ngambil dari root
+        em (element) : ngambil dari tag parent
+        
+        nah kalau di browsernya diubah zoomnya rem sama em ngikut tapi absolute engga
+        makanya mendingan pake em sama rem jangan pake absolute terus jadi nya website kita lebih responsif
+        */
+
+    </style>
+</head>
+<body>
+    
+    <!-- inline -->
+    <span class="inline">
+        ini block
+    </span>
+    <!-- span default nya inline -->
+
+     <!-- block -->
+     <div class="block">
+        ini block
+     </div>
+     <!-- div defaultnya block -->
+
+      <!-- inline block-->
+    <p class="inline-block">
+        ini inline-block
+    </p>
+    <!-- p defaultnya block -->
+
+    <p class="absolute">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque voluptate voluptatem eius voluptates aspernatur incidunt at, ipsam ipsa numquam soluta dolores tempore hic deserunt, sit earum. Maiores neque quibusdam omnis quis velit cupiditate, ut dolores earum fugiat quod optio aliquam ullam suscipit sunt sapiente itaque, nisi officia dolor debitis.</p>
+    <hr>
+    <p class="rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magnam laborum veritatis id veniam praesentium! Officia, accusantium accusamus tempore nemo ducimus esse nesciunt labore repellat corrupti quisquam placeat exercitationem dolore laborum! Dolore, debitis sunt quam cupiditate ad animi placeat eum et illo sequi aliquam sapiente necessitatibus facilis amet dolorum repellendus.</p>
+    <hr>
+    <p class="em">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eveniet, voluptatum maxime veniam unde eum magnam a est, molestiae perspiciatis ratione optio exercitationem necessitatibus voluptatem nostrum vitae sapiente neque, officia maiores quis. A reiciendis ea architecto magni officiis modi maxime molestiae ullam nobis, aspernatur voluptatibus, obcaecati cum tenetur, consequuntur iure.</p>
+    <hr>
+</body>
+</html>
